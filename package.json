@@ -1,0 +1,30 @@
+{
+  "name": "video-talker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/index.js"
+  },
+  "author": "Marek Gryszkiewicz",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^2.0.1",
+    "knex": "^3.1.0",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "mysql-migrations": "^1.0.7",
+    "mysql2": "^3.11.0",
+    "peer": "^0.6.1",
+    "socket.io": "^4.0.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

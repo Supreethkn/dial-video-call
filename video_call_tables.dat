@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS `auditReports` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `callStartTime` datetime NOT NULL,
+  `operatorName` varchar(45) NOT NULL,
+  `callDuration` varchar(100) NOT NULL,
+  `callEndTime` datetime NOT NULL,
+  `callOrigin` varchar(500) NOT NULL,
+  `reason` varchar(500) NOT NULL,
+  `recording` varchar(500) DEFAULT NULL,
+  `roomId` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS `callDetails` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `roomId` varchar(500) NOT NULL,
+  `callOriginationTime` datetime NOT NULL,
+  `callOrigin` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE IF NOT EXISTS `usertable` (
+  `userId` int NOT NULL AUTO_INCREMENT,
+  `userName` varchar(45) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `isAdmin` tinyint DEFAULT NULL,
+  `emailAddress` varchar(100) NOT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
